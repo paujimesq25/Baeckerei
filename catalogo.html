@@ -6,70 +6,57 @@
     <meta name="description" content="Catálogo de panes alemanes artesanales - Bäckerei Deutsche">
     <title>Catálogo - Bäckerei Deutsche</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/catalogo.css">
-    
+    <link rel="stylesheet" href="/css/catalogo.css">
 </head>
-
-
 <body>
-<script src="javaScript/catalogo.js"></script>
-        
+
 <!-- Navegación -->
-        <nav class="navbar">
-  <a href="index.html" class="logo">
-    <span class="logo-text">BÄCKEREI DEUTSCHE</span>
-    <span class="logo-subtitle">PANADERÍA ALEMANA</span>
-     </a>
-            <button class="menu-toggle" aria-label="Toggle menu">☰</button>
-            <ul class="nav-menu">
-                <li><a href="index.html">Inicio</a></li>
-                <li class="dropdown">
-                    <a href="catalogo.html">Catálogo</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="catalogo-salado.html">Salado</a></li>
-                        <li><a href="catalogo-dulce.html">Dulce</a></li>
-                    </ul>
-                </li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="blog.html">Newsletter</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
+<nav class="navbar">
+    <a href="index.html" class="logo">
+        <span class="logo-text">BÄCKEREI DEUTSCHE</span>
+        <span class="logo-subtitle">PANADERÍA ALEMANA</span>
+    </a>
+    <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+    <ul class="nav-menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li class="dropdown">
+            <a href="catalogo.html">Catálogo</a>
+            <ul class="dropdown-menu">
+                <li><a href="catalogo-salado.html">Salado</a></li>
+                <li><a href="catalogo-dulce.html">Dulce</a></li>
             </ul>
-        </nav>
-</header>
+        </li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="blog.html">Newsletter</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+</nav>
 <!-- FIN Navegación -->
 
-    <!-- Main Content -->
-    <main>
-        <!-- Sección Título -->
-        <section class="title-section center">
-            <h2>Catálogo</h2>
-            <p class="subtitle-text">Descubre nuestros deliciosos panes artesanales alemanes</p>
-            <a href="contacto.html" class="btn-contact-cta">
-                <i class="fa-solid fa-shopping-bag"></i>
-                ¡Visítanos en nuestro local!
-            </a>
-        </section>
-        <!-- Contenedor de Catálogo -->
-        <section class="catalog-container">
-            <a href="catalogo-salado.html" class="catalog-card">
-                <img src="img/pretzel.jpg" alt="Catálogo Salado">
-                <h3>Catálogo Salado</h3>
-            </a>
+<!-- Sección Título -->
+<section class="title-section center">
+    <h2>Catálogo</h2>
+    <p class="subtitle-text">Descubre nuestros deliciosos panes artesanales alemanes</p>
+    <a href="contacto.html" class="btn-contact-cta">
+        <i class="fa-solid fa-shopping-bag"></i>
+        ¡Visítanos en nuestro local!
+    </a>
+</section>
 
-            <a href="catalogo-dulce.html" class="catalog-card">
-                <img src="img/Stollen.jpg" alt="Catálogo Dulce">
-                <h3>Catálogo Dulce</h3>
-            </a>
-        </section>
-    </main>
-
-    <!-- Botón WhatsApp -->
-    <a href="https://wa.me/50688889999" class="whatsapp-btn" aria-label="WhatsApp">
-        <i class="fa-brands fa-whatsapp"></i>
+<!-- Contenedor de Catálogo -->
+<section class="catalog-container">
+    <a href="catalogo-salado.html" class="catalog-card">
+        <img src="/img/pretzel.jpg" alt="Catálogo Salado">
+        <h3>Catálogo Salado</h3>
     </a>
 
- <!-- Footer -->
+    <a href="catalogo-dulce.html" class="catalog-card">
+        <img src="/img/Stollen.jpg" alt="Catálogo Dulce">
+        <h3>Catálogo Dulce</h3>
+    </a>
+</section>
+
+<!-- Footer -->
 <footer>
     <div class="footer-content">
         <div class="footer-logo">
@@ -104,7 +91,11 @@
                 <a href="https://www.instagram.com/backerei.deutsche2028/" target="_blank" 
    rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
             </div>
-            <!-- Botón WhatsApp -->
+        </div>
+    </div>
+</footer>
+
+<!-- Botón WhatsApp -->
 <a href="https://wa.me/50687122163" 
    class="whatsapp-btn" 
    aria-label="WhatsApp"
@@ -112,5 +103,8 @@
    rel="noopener noreferrer">
     <i class="fa-brands fa-whatsapp"></i>
 </a>
-        </div>
-    </footer>
+
+<!-- JavaScript al final del body -->
+<script src="/javaScript/catalogo.js"></script>
+</body>
+</html>
