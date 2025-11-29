@@ -1,8 +1,41 @@
-   .nav-menu a.active {
-    color: var(--color-primary);
-    font-weight: 600;
-    border-bottom: 2px solid var(--color-primary);
+/* ===================================
+   VARIABLES DE COLORES
+   =================================== */
+:root {
+    --color-primary: #8B5E3C;      /* Marrón café principal */
+    --color-primary-dark: #6B4628; /* Marrón café oscuro */
+    --color-secondary: #D6A24A;    /* Dorado/mostaza */
+    --color-light: #F5E9DA;        /* Beige claro */
+    --color-cream: #FAF6F0;        /* Crema muy claro */
+    --color-dark: #6B4628;         /* Marrón café oscuro (textos) */
+    --color-white: #FFFFFF;        /* Blanco puro */
+    --shadow-sm: 0 2px 5px rgba(107, 70, 40, 0.1);
+    --shadow-md: 0 4px 12px rgba(107, 70, 40, 0.15);
+    --shadow-lg: 0 8px 24px rgba(107, 70, 40, 0.1);
+    --transition: all 0.3s ease;
 }
+
+/* ===================================
+   RESET Y ESTILOS BASE
+   =================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--color-dark);
+    line-height: 1.6;
+    background-color: var(--color-cream);
+    overflow-x: hidden;
+    padding-top: 80px; /* Espacio para la navbar fija */
+}
+
+/* ===================================
+   BARRA DE NAVEGACIÓN
+   =================================== */
 .navbar {
     background-color: var(--color-white);
     padding: 15px 50px;
@@ -10,20 +43,18 @@
     justify-content: space-between;
     align-items: center;
     box-shadow: var(--shadow-sm);
-
-    position: fixed;   /* ✔ ahora sí queda fijo */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-
     z-index: 1000;
 }
+
 .logo {
     display: flex;
     flex-direction: column;
     text-decoration: none;   
     color: inherit;       
-    
 }
 
 .logo-text {
@@ -75,18 +106,87 @@
 }
 
 /* ===================================
+   DROPDOWN MENÚ
+   =================================== */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--color-white);
+    box-shadow: var(--shadow-md);
+    list-style: none;
+    padding: 10px 0;
+    min-width: 150px;
+    border-radius: 8px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    padding: 0;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 20px;
+}
+
+.dropdown-menu a:hover {
+    background-color: var(--color-light);
+}
+
+/* ===================================
    HERO BLOG
    =================================== */
 .blog-hero {
     background-color: var(--color-light);
-    padding: 80px 50px;
+    padding: 60px 50px;
     text-align: center;
 }
 
 .blog-hero h1 {
-    font-size: 52px;
+    font-size: 48px;
     color: var(--color-primary-dark);
     font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* ===================================
+   FORMULARIO NEWSLETTER EN HERO
+   =================================== */
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.newsletter-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.newsletter-row label {
+    font-size: 16px;
+    font-weight: 500;
+    white-space: nowrap;
+    color: var(--color-primary-dark);
+}
+
+.newsletter-row input {
+    height: 44px;
+    padding: 0 16px;
+    border-radius: 8px 0 0 8px;
+    border: 1px solid #ccc;
+    min-width: 260px;
+}
+
+.newsletter-row button {
+    height: 44px;
+    border-radius: 0 8px 8px 0;
 }
 
 /* ===================================
@@ -161,156 +261,195 @@
 }
 
 /* ===================================
-   SECCIÓN BLOG
+   BOTONES
    =================================== */
-
-.blog{
-    text-align: center;
-    font-size: 25px;
-    margin-top: 20px;
-}
-
-.blog-section {
-    padding: 60px 20px;
-    background: var(--color-cream);
-    text-align: center;
-}
-
-.blog-section h2.blog {
-    font-size: 35px;
-    margin-bottom: 30px;
-    color: var(--color-primary-dark);
-}
-
-/* Label */
-.email-label {
-    display: block;
-    font-size: 18px;
-    font-weight: 500;
-    margin-bottom: 8px;
-    text-align: left;
-    width: 100%;
-    max-width: 500px;
-    margin: 0 auto 10px auto;
-    margin-left: 500px;
-}
-
-/* Input + Botón (desktop) */
-.blog-section .input-group {
-    display: flex;
-    max-width: 500px;
-    margin: 0 auto; /* CENTRADO sin márgenes fijos */
-}
-
-.blog-section .input-group input {
-    flex: 1;
-    height: 55px;
-    padding: 0 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px 0 0 8px;
+.btn {
+    display: inline-block;
+    padding: 14px 32px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
     font-size: 16px;
 }
 
-.blog-section .input-group button {
-    height: 55px;
-    padding: 0 25px;
-    border-radius: 0 8px 8px 0;
-    font-size: 16px;
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
 }
 
 /* ===================================
-   RESPONSIVE
+   FOOTER
    =================================== */
-@media (max-width: 768px) {
-
-    /* label centrado */
-    .email-label {
-        text-align: center;
-        margin-bottom: 15px;
-        margin-left: -115px;
-        margin-top: -60px;
-    }
-
-    /* input + botón apilados */
-    .blog-section .input-group {
-        flex-direction: column;
-        gap: 10px;
-    }
-.class{
-    height: 50px;
-}
-    .blog-section .input-group input,
-    .blog-section .input-group button {
-        width: 10 0%;
-        border-radius: 10px;
-        height: 30px;
-    }
+footer {
+    background-color: var(--color-primary-dark);
+    color: var(--color-white);
+    padding: 50px 50px 25px;
 }
 
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-logo .logo {
+    margin-bottom: 15px;
+}
+
+.footer-logo .logo-text,
+.footer-logo .logo-subtitle {
+    color: var(--color-white);
+}
+
+.tagline {
+    font-style: italic;
+    font-size: 14px;
+    color: var(--color-light);
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links a {
+    color: var(--color-white);
+    text-decoration: none;
+    line-height: 2;
+    transition: var(--transition);
+}
+
+.footer-links a:hover {
+    color: var(--color-secondary);
+}
+
+.footer-contact p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: var(--color-light);
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-social a {
+    font-size: 24px;
+    text-decoration: none;
+    transition: var(--transition);
+    color: var(--color-white);
+}
+
+.footer-social a:hover {
+    color: var(--color-secondary);
+    transform: scale(1.2);
+}
+
+/* ===================================
+   BOTÓN WHATSAPP
+   =================================== */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25D366;
+    color: var(--color-white);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    text-decoration: none;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    z-index: 999;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+    box-shadow: var(--shadow-lg);
+}
+
+.whatsapp-btn i {
+    font-size: 32px;
+}
+
+/* ===================================
+   RESPONSIVE DESIGN - TABLET
+   =================================== */
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 15px 30px;
+    }
+    
+    .blog-hero {
+        padding: 50px 30px;
+    }
+
+    .blog-hero h1 {
+        font-size: 40px;
+    }
+
+    .featured-post {
+        padding: 60px 30px;
+        gap: 50px;
+    }
+    
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
 
 /* ===================================
    RESPONSIVE DESIGN - MÓVIL
    =================================== */
 @media (max-width: 768px) {
-    .blog-hero {
-        padding: 50px 20px;
-    }
-    
-    .blog-hero h1 {
-        font-size: 32px;
-    }
-    
-    .featured-post {
-        padding: 50px 20px;
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-    
-    .post-content {
-        padding: 30px 20px;
-    }
-    
-    .post-content h2 {
-        font-size: 26px;
-    }
-    
-    .post-content p {
-        font-size: 16px;
-    }
-    
-    .play-button {
-        width: 70px;
-        height: 70px;
-        font-size: 28px;
-    }
-}
-
-
-@media (max-width: 768px) {
     .menu-toggle {
         display: block;
     }
-
+    
     .nav-menu {
         display: none;
+        flex-direction: column;
         position: absolute;
         top: 100%;
         left: 0;
-        width: 100%;
-        flex-direction: column;
-        background: var(--color-white);
-        padding: 20px 0;
+        right: 0;
+        background-color: var(--color-white);
         box-shadow: var(--shadow-md);
-        z-index: 1001;
+        padding: 20px;
+        gap: 0;
     }
-
+    
     .nav-menu.active {
         display: flex;
     }
-
+    
     .nav-menu li {
-        text-align: center;
         width: 100%;
+        border-bottom: 1px solid var(--color-light);
+    }
+    
+    .nav-menu li:last-child {
+        border-bottom: none;
+    }
+    
+    .nav-menu a {
+        display: block;
+        padding: 15px 10px;
     }
     
     .dropdown-menu {
@@ -319,7 +458,6 @@
         box-shadow: none;
         padding: 0 0 0 20px;
         background-color: var(--color-light);
-        border-radius: 0;
     }
     
     .dropdown:hover .dropdown-menu {
@@ -329,47 +467,28 @@
     .dropdown.active .dropdown-menu {
         display: block !important;
     }
-}
-/* ===== Formularios de Newsletter (arriba y abajo) ===== */
-
-.newsletter-form {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-/* Fila con label + input + botón */
-.newsletter-row {
-    display: flex;
-    align-items: center;        /* misma altura vertical */
-    gap: 8px;                  /* distancia entre "Correo electrónico" y la casilla */
-}
-
-/* Texto "Correo electrónico" */
-.newsletter-row label {
-    font-size: 16px;
-    font-weight: 500;
-    white-space: nowrap;        /* que no se parta en dos líneas */
-    color: var(--color-primary-dark);
-}
-
-/* Input de email */
-.newsletter-row input {
-    height: 44px;
-    padding: 0 16px;
-    border-radius: 8px 0 0 8px;
-    border: 1px solid #ccc;
-    min-width: 260px;
-}
-
-/* Botón "Unirse" (usa tu estilo de .btn .btn-primary) */
-.newsletter-row button {
-    height: 44px;
-    border-radius: 0 8px 8px 0;
-}
-
-/* ===== Versión móvil ===== */
-@media (max-width: 768px) {
+    
+    .navbar {
+        padding: 15px 20px;
+    }
+    
+    .logo-text {
+        font-size: 20px;
+    }
+    
+    .logo-subtitle {
+        font-size: 10px;
+    }
+    
+    .blog-hero {
+        padding: 40px 20px;
+    }
+    
+    .blog-hero h1 {
+        font-size: 32px;
+        margin-bottom: 25px;
+    }
+    
     .newsletter-form {
         justify-content: center;
     }
@@ -384,13 +503,70 @@
     }
 
     .newsletter-row label {
-        text-align: left;
+        text-align: center;
     }
 
     .newsletter-row input,
     .newsletter-row button {
         width: 100%;
         border-radius: 8px;
+    }
+    
+    .featured-post {
+        padding: 50px 20px;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .post-content {
+        padding: 30px 20px;
+    }
+    
+    .post-content h2 {
+        font-size: 28px;
+    }
+    
+    .post-content p {
+        font-size: 16px;
+    }
+    
+    .play-button {
+        width: 70px;
+        height: 70px;
+        font-size: 28px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    footer {
+        padding: 35px 20px 20px;
+    }
+    
+    .whatsapp-btn {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    .whatsapp-btn i {
+        font-size: 26px;
+    }
+}
+
+/* ===================================
+   RESPONSIVE DESIGN - MÓVIL PEQUEÑO
+   =================================== */
+@media (max-width: 480px) {
+    .blog-hero h1 {
+        font-size: 28px;
+    }
+    
+    .post-content h2 {
+        font-size: 24px;
     }
 }
 
