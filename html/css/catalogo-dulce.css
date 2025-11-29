@@ -1,0 +1,786 @@
+/* ===================================
+   VARIABLES DE COLORES
+   =================================== */
+:root {
+    --color-primary: #8B5E3C;      /* Marrón café principal */
+    --color-primary-dark: #6B4628; /* Marrón café oscuro */
+    --color-secondary: #D6A24A;    /* Dorado/mostaza */
+    --color-light: #F5E9DA;        /* Beige claro */
+    --color-cream: #FAF6F0;        /* Crema muy claro */
+    --color-dark: #6B4628;         /* Marrón café oscuro (textos) */
+    --color-white: #FFFFFF;        /* Blanco puro */
+    --shadow-sm: 0 2px 5px rgba(107, 70, 40, 0.1);
+    --shadow-md: 0 4px 12px rgba(107, 70, 40, 0.15);
+    --shadow-lg: 0 8px 24px rgba(107, 70, 40, 0.1);
+    --transition: all 0.3s ease;
+}
+.logo {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;   
+    color: inherit;       
+    
+}
+
+   .nav-menu a.active {
+    color: var(--color-primary);
+    font-weight: 600;
+    border-bottom: 2px solid var(--color-primary);
+}
+.navbar {
+    background-color: var(--color-white);
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--shadow-sm);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.logo {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;   
+    color: inherit;       
+    
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--color-primary);
+    letter-spacing: 1px;
+}
+
+.logo-subtitle {
+    font-size: 12px;
+    color: var(--color-primary-dark);
+    letter-spacing: 2px;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: var(--color-primary);
+    padding: 5px;
+    z-index: 1001;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-menu li {
+    position: relative;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--color-dark);
+    font-weight: 500;
+    padding: 10px 15px;
+    transition: var(--transition);
+    display: block;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: var(--color-primary);
+}
+
+/* ===================================
+   RESET Y ESTILOS BASE
+   =================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--color-dark);
+    line-height: 1.6;
+    background-color: var(--color-cream);
+    overflow-x: hidden;
+    padding-top: 80px; /* Espacio para la navbar fija */
+}
+
+/* ===================================
+   HEADER Y BARRA SOCIAL
+   =================================== */
+.social-bar {
+    background-color: var(--color-light);
+    padding: 10px 0;
+    text-align: center;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icons a {
+    font-size: 20px;
+    text-decoration: none;
+    transition: var(--transition);
+    color: var(--color-primary);
+}
+
+.social-icons a:hover {
+    color: var(--color-primary-dark);
+    transform: scale(1.2);
+}
+
+.social-icons i {
+    font-size: 18px;
+}
+
+/* ===================================
+   BARRA DE NAVEGACIÓN
+   =================================== */
+.navbar {
+    background-color: var(--color-white);
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--shadow-sm);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--color-primary);
+    letter-spacing: 1px;
+}
+
+.logo-subtitle {
+    font-size: 12px;
+    color: var(--color-primary-dark);
+    letter-spacing: 2px;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: var(--color-primary);
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-menu li {
+    position: relative;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--color-dark);
+    font-weight: 500;
+    padding: 10px 15px;
+    transition: var(--transition);
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: var(--color-primary);
+}
+
+/* ===================================
+   DROPDOWN MENÚ
+   =================================== */
+.dropdown-menu {
+    display: none ;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--color-white);
+    box-shadow: var(--shadow-md);
+    list-style: none;
+    padding: 10px 0;
+    min-width: 150px;
+    border-radius: 8px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    padding: 0;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 20px;
+}
+
+.dropdown-menu a:hover {
+    background-color: var(--color-light);
+}
+
+/* ===================================
+   CATÁLOGO HEADER
+   =================================== */
+.catalog-header {
+    background-color: var(--color-light);
+    padding: 60px 50px;
+    text-align: center;
+}
+
+.catalog-header h1 {
+    font-size: 48px;
+    color: var(--color-primary-dark);
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.catalog-nav {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    font-size: 20px;
+}
+
+.catalog-nav a {
+    text-decoration: none;
+    color: var(--color-dark);
+    font-weight: 500;
+    transition: var(--transition);
+    padding: 10px 18px;
+    border-radius: 8px;
+}
+
+.catalog-nav a:hover,
+.catalog-nav a.active {
+    color: var(--color-primary);
+    background-color: rgba(139, 94, 60, 0.1);
+}
+
+/* ===================================
+   PRODUCTOS
+   =================================== */
+.products-grid {
+    padding: 80px 50px;
+    background-color: var(--color-cream);
+}
+
+.product-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    margin-bottom: 80px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.product-item.reverse {
+    direction: rtl;
+}
+
+.product-item.reverse > * {
+    direction: ltr;
+}
+
+.product-image {
+    width: 100%;
+}
+
+.placeholder-image {
+    background: linear-gradient(135deg, var(--color-light) 0%, var(--color-cream) 100%);
+    width: 100%;
+    aspect-ratio: 4/3;
+    border-radius: 12px;
+    border: 2px solid var(--color-light);
+}
+
+.product-details h3 {
+    font-size: 36px;
+    color: var(--color-primary-dark);
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.product-details p {
+    font-size: 18px;
+    margin-bottom: 18px;
+    line-height: 1.8;
+    color: var(--color-dark);
+}
+
+.product-origin {
+    font-size: 16px;
+    color: var(--color-primary);
+    font-style: italic;
+    margin-bottom: 25px;
+    line-height: 1.7;
+}
+
+/* ===================================
+   BOTONES
+   =================================== */
+.btn {
+    display: inline-block;
+    padding: 14px 32px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-secondary {
+    background-color: var(--color-light);
+    color: var(--color-primary-dark);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+/* ===================================
+   INFORMACIÓN NUTRICIONAL DROPDOWN
+   =================================== */
+.nutrition-box {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease, padding 0.5s ease, margin-top 0.5s ease;
+    opacity: 0;
+    background-color: #f9f7f2;
+    border-left: 4px solid #c9a86a;
+    border-radius: 8px;
+    padding: 0 20px;
+    margin-top: 0;
+}
+
+.nutrition-box.active {
+    max-height: 600px;
+    opacity: 1;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.nutrition-box h4 {
+    color: var(--color-primary-dark);
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+
+.nutrition-box p {
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.nutrition-box ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.nutrition-box li {
+    padding: 5px 0;
+    font-size: 15px;
+}
+
+.chevron {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    margin-left: 8px;
+}
+
+.btn-secondary.active .chevron {
+    transform: rotate(180deg);
+}
+
+/* ===================================
+   BOTÓN WHATSAPP
+   =================================== */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25D366;
+    color: var(--color-white);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    text-decoration: none;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    z-index: 999;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+    box-shadow: var(--shadow-lg);
+}
+
+.whatsapp-btn i {
+    font-size: 32px;
+}
+
+/* ===================================
+   FOOTER
+   =================================== */
+footer {
+    background-color: var(--color-primary-dark);
+    color: var(--color-white);
+    padding: 50px 50px 25px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-logo .logo {
+    margin-bottom: 15px;
+}
+
+.footer-logo .logo-text,
+.footer-logo .logo-subtitle {
+    color: var(--color-white);
+}
+
+.tagline {
+    font-style: italic;
+    font-size: 14px;
+    color: var(--color-light);
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links a {
+    color: var(--color-white);
+    text-decoration: none;
+    line-height: 2;
+    transition: var(--transition);
+}
+
+.footer-links a:hover {
+    color: var(--color-secondary);
+}
+
+.footer-contact p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: var(--color-light);
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-social a {
+    font-size: 24px;
+    text-decoration: none;
+    transition: var(--transition);
+    color: var(--color-white);
+}
+
+.footer-social a:hover {
+    color: var(--color-secondary);
+    transform: scale(1.2);
+}
+
+.footer-social i {
+    font-size: 20px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 14px;
+}
+
+/* ===================================
+   RESPONSIVE DESIGN - TABLET
+   =================================== */
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 15px 30px;
+    }
+    
+    .catalog-header {
+        padding: 50px 30px;
+    }
+
+    .catalog-header h1 {
+        font-size: 40px;
+    }
+
+    .products-grid {
+        padding: 60px 30px;
+    }
+
+    .product-item {
+        gap: 50px;
+        margin-bottom: 60px;
+    }
+    
+    .product-details h3 {
+        font-size: 32px;
+    }
+    
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+/* ===================================
+   RESPONSIVE DESIGN - MÓVIL
+   =================================== */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--color-white);
+        box-shadow: var(--shadow-md);
+        padding: 20px;
+        gap: 0;
+    }
+    
+    .nav-menu.active {
+        display: flex;
+    }
+    
+    .nav-menu li {
+        width: 100%;
+        border-bottom: 1px solid var(--color-light);
+    }
+    
+    .nav-menu li:last-child {
+        border-bottom: none;
+    }
+    
+    .nav-menu a {
+        display: block;
+        padding: 15px 10px;
+    }
+    
+    .dropdown-menu {
+        position: static;
+        display: none;
+        box-shadow: none;
+        padding: 0 0 0 20px;
+        background-color: var(--color-light);
+    }
+    
+    .dropdown:hover .dropdown-menu {
+        display: none;
+    }
+    
+    .dropdown.active .dropdown-menu {
+        display: block !important;
+    }
+    
+    .navbar {
+        padding: 15px 20px;
+    }
+    
+    .logo-text {
+        font-size: 20px;
+    }
+    
+    .logo-subtitle {
+        font-size: 10px;
+    }
+    
+    .catalog-header {
+        padding: 40px 20px;
+    }
+
+    .catalog-header h1 {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+    
+    .catalog-nav {
+        font-size: 16px;
+        gap: 20px;
+    }
+
+    .products-grid {
+        padding: 50px 20px;
+    }
+
+    .product-item,
+    .product-item.reverse {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        direction: ltr;
+        margin-bottom: 50px;
+    }
+
+    .product-details h3 {
+        font-size: 26px;
+    }
+    
+    .product-details p {
+        font-size: 16px;
+    }
+    
+    .product-origin {
+        font-size: 15px;
+    }
+    
+    .btn {
+        padding: 12px 28px;
+        font-size: 14px;
+    }
+    
+    .nutrition-box {
+        padding: 18px;
+    }
+    
+    .nutrition-box h4 {
+        font-size: 16px;
+    }
+    
+    .nutrition-box p,
+    .nutrition-box li {
+        font-size: 14px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    footer {
+        padding: 35px 20px 20px;
+    }
+    
+    .whatsapp-btn {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    .whatsapp-btn i {
+        font-size: 26px;
+    }
+}
+
+/* ===================================
+   RESPONSIVE DESIGN - MÓVIL PEQUEÑO
+   =================================== */
+@media (max-width: 480px) {
+    .catalog-header h1 {
+        font-size: 28px;
+    }
+    
+    .catalog-nav {
+        font-size: 14px;
+        gap: 15px;
+    }
+    
+    .product-details h3 {
+        font-size: 24px;
+    }
+    
+    .product-details p {
+        font-size: 15px;
+    }
+    
+    .product-origin {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background: var(--color-white);
+        padding: 20px 0;
+        box-shadow: var(--shadow-md);
+        z-index: 1001;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu li {
+        text-align: center;
+        width: 100%;
+    }
+}
+@media (max-width: 768px) {
+    .product-item,
+    .product-item.reverse {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .product-item .product-image,
+    .product-item.reverse .product-image {
+        order: 1;
+    }
+
+    .product-item .product-details,
+    .product-item.reverse .product-details {
+        order: 2;
+    }
+}
