@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Menú móvil
     const menuToggle = document.querySelector('.menu-toggle');
     const navMenu = document.querySelector('.nav-menu');
     const dropdown = document.querySelector('.dropdown');
@@ -21,7 +22,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-    
     // Cerrar menú al hacer clic fuera
     document.addEventListener('click', function(event) {
         if (navMenu && menuToggle) {
