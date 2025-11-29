@@ -1,0 +1,396 @@
+   .nav-menu a.active {
+    color: var(--color-primary);
+    font-weight: 600;
+    border-bottom: 2px solid var(--color-primary);
+}
+.navbar {
+    background-color: var(--color-white);
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--shadow-sm);
+
+    position: fixed;   /* ✔ ahora sí queda fijo */
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    z-index: 1000;
+}
+.logo {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;   
+    color: inherit;       
+    
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--color-primary);
+    letter-spacing: 1px;
+}
+
+.logo-subtitle {
+    font-size: 12px;
+    color: var(--color-primary-dark);
+    letter-spacing: 2px;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: var(--color-primary);
+    padding: 5px;
+    z-index: 1001;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-menu li {
+    position: relative;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--color-dark);
+    font-weight: 500;
+    padding: 10px 15px;
+    transition: var(--transition);
+    display: block;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: var(--color-primary);
+}
+
+/* ===================================
+   HERO BLOG
+   =================================== */
+.blog-hero {
+    background-color: var(--color-light);
+    padding: 80px 50px;
+    text-align: center;
+}
+
+.blog-hero h1 {
+    font-size: 52px;
+    color: var(--color-primary-dark);
+    font-weight: bold;
+}
+
+/* ===================================
+   POST DESTACADO
+   =================================== */
+.featured-post {
+    padding: 80px 50px;
+    background-color: var(--color-cream);
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 60px;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.post-video {
+    width: 100%;
+}
+
+.placeholder-video {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: linear-gradient(135deg, var(--color-light) 0%, var(--color-cream) 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--color-light);
+}
+
+.play-button {
+    width: 90px;
+    height: 90px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: var(--shadow-md);
+}
+
+.play-button:hover {
+    background-color: var(--color-primary-dark);
+    transform: scale(1.1);
+}
+
+.post-content {
+    background-color: var(--color-white);
+    padding: 45px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-md);
+}
+
+.post-content h2 {
+    font-size: 38px;
+    color: var(--color-primary-dark);
+    margin-bottom: 25px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.post-content p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 18px;
+    color: var(--color-dark);
+}
+
+/* ===================================
+   SECCIÓN BLOG
+   =================================== */
+
+.blog{
+    text-align: center;
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+.blog-section {
+    padding: 60px 20px;
+    background: var(--color-cream);
+    text-align: center;
+}
+
+.blog-section h2.blog {
+    font-size: 35px;
+    margin-bottom: 30px;
+    color: var(--color-primary-dark);
+}
+
+/* Label */
+.email-label {
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    text-align: left;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto 10px auto;
+    margin-left: 500px;
+}
+
+/* Input + Botón (desktop) */
+.blog-section .input-group {
+    display: flex;
+    max-width: 500px;
+    margin: 0 auto; /* CENTRADO sin márgenes fijos */
+}
+
+.blog-section .input-group input {
+    flex: 1;
+    height: 55px;
+    padding: 0 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px 0 0 8px;
+    font-size: 16px;
+}
+
+.blog-section .input-group button {
+    height: 55px;
+    padding: 0 25px;
+    border-radius: 0 8px 8px 0;
+    font-size: 16px;
+}
+
+/* ===================================
+   RESPONSIVE
+   =================================== */
+@media (max-width: 768px) {
+
+    /* label centrado */
+    .email-label {
+        text-align: center;
+        margin-bottom: 15px;
+        margin-left: -115px;
+        margin-top: -60px;
+    }
+
+    /* input + botón apilados */
+    .blog-section .input-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+.class{
+    height: 50px;
+}
+    .blog-section .input-group input,
+    .blog-section .input-group button {
+        width: 10 0%;
+        border-radius: 10px;
+        height: 30px;
+    }
+}
+
+
+/* ===================================
+   RESPONSIVE DESIGN - MÓVIL
+   =================================== */
+@media (max-width: 768px) {
+    .blog-hero {
+        padding: 50px 20px;
+    }
+    
+    .blog-hero h1 {
+        font-size: 32px;
+    }
+    
+    .featured-post {
+        padding: 50px 20px;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .post-content {
+        padding: 30px 20px;
+    }
+    
+    .post-content h2 {
+        font-size: 26px;
+    }
+    
+    .post-content p {
+        font-size: 16px;
+    }
+    
+    .play-button {
+        width: 70px;
+        height: 70px;
+        font-size: 28px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background: var(--color-white);
+        padding: 20px 0;
+        box-shadow: var(--shadow-md);
+        z-index: 1001;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu li {
+        text-align: center;
+        width: 100%;
+    }
+    
+    .dropdown-menu {
+        position: static;
+        display: none;
+        box-shadow: none;
+        padding: 0 0 0 20px;
+        background-color: var(--color-light);
+        border-radius: 0;
+    }
+    
+    .dropdown:hover .dropdown-menu {
+        display: none;
+    }
+    
+    .dropdown.active .dropdown-menu {
+        display: block !important;
+    }
+}
+/* ===== Formularios de Newsletter (arriba y abajo) ===== */
+
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Fila con label + input + botón */
+.newsletter-row {
+    display: flex;
+    align-items: center;        /* misma altura vertical */
+    gap: 8px;                  /* distancia entre "Correo electrónico" y la casilla */
+}
+
+/* Texto "Correo electrónico" */
+.newsletter-row label {
+    font-size: 16px;
+    font-weight: 500;
+    white-space: nowrap;        /* que no se parta en dos líneas */
+    color: var(--color-primary-dark);
+}
+
+/* Input de email */
+.newsletter-row input {
+    height: 44px;
+    padding: 0 16px;
+    border-radius: 8px 0 0 8px;
+    border: 1px solid #ccc;
+    min-width: 260px;
+}
+
+/* Botón "Unirse" (usa tu estilo de .btn .btn-primary) */
+.newsletter-row button {
+    height: 44px;
+    border-radius: 0 8px 8px 0;
+}
+
+/* ===== Versión móvil ===== */
+@media (max-width: 768px) {
+    .newsletter-form {
+        justify-content: center;
+    }
+
+    .newsletter-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
+    }
+
+    .newsletter-row label {
+        text-align: left;
+    }
+
+    .newsletter-row input,
+    .newsletter-row button {
+        width: 100%;
+        border-radius: 8px;
+    }
+}
+

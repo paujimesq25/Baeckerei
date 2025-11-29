@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bäckerei Deutsche - Panadería Alemana en Costa Rica. El sabor de Alemania en cada pan.">
+    <title>Inicio - Bäckerei Deutsche</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Rutas relativas corregidas -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+
+<!-- Navegación -->
+<nav class="navbar">
+  <a href="index.html" class="logo">
+    <span class="logo-text">BÄCKEREI DEUTSCHE</span>
+    <span class="logo-subtitle">PANADERÍA ALEMANA</span>
+  </a>
+  <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+  <ul class="nav-menu">
+    <li><a href="index.html">Inicio</a></li>
+    <li class="dropdown">
+      <a href="catalogo.html">Catálogo</a>
+      <ul class="dropdown-menu">
+        <li><a href="catalogo-salado.html">Salado</a></li>
+        <li><a href="catalogo-dulce.html">Dulce</a></li>
+      </ul>
+    </li>
+    <li><a href="nosotros.html">Nosotros</a></li>
+    <li><a href="blog.html">Newsletter</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+  </ul>
+</nav>
+<!-- FIN Navegación -->
+
+<!-- Hero Principal -->
+<section class="hero">
+    <div class="hero-overlay"></div>
+    
+    
+    <div class="hero-content">
+        <h2 class="subtitle">El sabor de</h2>
+        <h1 class="title">Alemania</h1>
+        <h2 class="subtitle2">en cada pan</h2>
+        <p class="hero-text">
+            Somos una panadería especializada exclusivamente en la elaboración y venta de pan alemán artesanal.
+        </p>
+        <a class="btn-hero" href="catalogo.html">Ver catálogo</a>
+    </div>
+</section>
+
+<!-- Sección Nosotros -->
+<div class="timeline-line"></div>
+
+<div class="section-title">
+    <h4 class="text-primary text-uppercase">Nuestra historia</h4>
+    <h1 class="display-4">Desde 2025</h1>
+</div>
+
+<section class="about" id="nosotros">
+    <div class="about-grid">
+        <div class="about-copy">
+            <h2>Nosotros</h2>
+            <p>
+                Bäckerei Deutsche nace del compromiso de traer la auténtica experiencia del pan alemán a nuestro mercado. 
+                La panadería se fundamenta en el respeto absoluto por las técnica artesanales centenarias que han hecho del pan alemán 
+                uno de los más reconocidos y apreciados del mundo.
+            </p>
+        </div>
+
+        <div class="about-image">
+            <img src="/img/extra2.jpg" alt="Panadería Alemana" style="width: 100%; height:100%; object-fit:cover">
+        </div>
+    </div>
+</section>
+
+<!-- Producto Favorito -->
+<section class="featured" id="catalogo">
+    <h2>Producto favorito</h2>
+    <article class="card">
+        <div class="card-media" role="img" aria-label="Pretzel (Brezel)">
+            <img src="/img/pretzel.jpg" alt="" style="width: 100%; height:100%; object-fit:cover">
+        </div>
+        <div class="card-body">
+            <h3>Pretzel (Brezel)</h3>
+            <p>
+                Bollo salado de forma retorcida que se sumerge en una solución alcalina (agua con bicarbonato de sodio)
+                antes de hornearse, lo que le da su color y sabor característicos.
+            </p>
+            <a class="btn btn-outline" href="catalogo.html">Ver más</a>
+        </div>
+    </article>
+</section>
+
+<!-- Sección Blog -->
+<section class="blog" id="blog">
+    <h2>Aprende con nosotros!</h2>
+    <p class="lead center narrow">
+        Conoce el proceso que hay detrás de nuestro delicioso pan artesanal con recetas tradicionales de Alemania.
+    </p>
+</section>
+
+<main>
+    <!-- Post Destacado -->
+    <section class="featured-post">
+        <div class="post-video">
+    <iframe width="80%" height="350"
+            src="https://www.youtube.com/embed/ZyN5oSeXWf4"
+            frameborder="0"
+            allowfullscreen>
+    </iframe>
+</div>
+        <div class="post-content">
+            <h2>Detrás de la vitrina</h2>
+            <p>Un día con Valeria en la cocina.</p>
+            <p>Conoce más sobre el proceso de nuestros deliciosos panes artesanales y descubre cosas únicas.</p>
+        </div>
+    </section>
+</main>
+
+<!-- Únete al blog -->
+<div class="blog-section">
+    <div class="container">
+        <h2 class="blog">Únete al Newsletter!</h2>
+        <form action="https://formspree.io/f/xjkqbdjj" method="POST">
+    <label class="email-label">Correo electrónico</label>
+    <div class="input-group">
+        <input type="email" name="email" class="email" placeholder="pauje2000@gmail.com" required>
+        <button type="submit" class="btn btn-primary">Unirse</button>
+    </div>
+</form>
+    </div>
+</div>
+
+ <!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-logo">
+            <div class="logo">
+                <span class="logo-text">BÄCKEREI DEUTSCHE</span>
+                <span class="logo-subtitle">PANADERÍA ALEMANA</span>
+            </div>
+            <p class="tagline">"El sabor de Alemania en cada pan."</p>
+        </div>
+        
+        <div class="footer-links">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="blog.html">Newsletter</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-contact">
+            <p>📍 Momentum Pinares, Curridabat, Costa Rica</p>
+            <p>📞 +506 8712 2163</p>
+            <p>✉️ pauje2000@gmail.com</p>
+            <p>🕐 Lun - Sáb: 7:00 a.m. - 6:00 p.m.</p>
+        </div>
+        <div class="footer-social-wrapper">
+            <p>Síguenos en Redes Sociales</p>
+            <div class="footer-social">
+                <a href="https://www.facebook.com/profile.php?id=61584060792637" target="_blank" 
+   rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/backerei.deutsche2028/" target="_blank" 
+   rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <!-- Botón WhatsApp -->
+<a href="https://wa.me/50687122163" 
+   class="whatsapp-btn" 
+   aria-label="WhatsApp"
+   target="_blank" 
+   rel="noopener noreferrer">
+    <i class="fa-brands fa-whatsapp"></i>
+</a>
+        </div>
+    </footer>
+
+<!-- JavaScript al final del body -->
+<script src="/javaScript/index.js"></script>
+</body>
+</html>
