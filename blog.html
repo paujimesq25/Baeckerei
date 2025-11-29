@@ -6,47 +6,36 @@
     <meta name="description" content="Blog de Bäckerei Deutsche - Conoce nuestro proceso artesanal">
     <title>Blog - Bäckerei Deutsche</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
-    <!-- CSS general -->
-    <link rel="stylesheet" href="css/styles.css">
-    <!-- CSS específico del blog -->
     <link rel="stylesheet" href="css/blog.css">
 </head>
-
 <body>
-    <!-- Navegación -->
-    <header>
-        <nav class="navbar">
-            <a href="index.html" class="logo">
-                <span class="logo-text">BÄCKEREI DEUTSCHE</span>
-                <span class="logo-subtitle">PANADERÍA ALEMANA</span>
-            </a>
 
-            <button class="menu-toggle" aria-label="Toggle menu">☰</button>
-
-            <ul class="nav-menu">
-                <li><a href="index.html">Inicio</a></li>
-                <li class="dropdown">
-                    <a href="catalogo.html">Catálogo</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="catalogo-salado.html">Salado</a></li>
-                        <li><a href="catalogo-dulce.html">Dulce</a></li>
-                    </ul>
-                </li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="blog.html" class="active">Newsletter</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
+<!-- Navegación -->
+<nav class="navbar">
+    <a href="index.html" class="logo">
+        <span class="logo-text">BÄCKEREI DEUTSCHE</span>
+        <span class="logo-subtitle">PANADERÍA ALEMANA</span>
+    </a>
+    <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+    <ul class="nav-menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li class="dropdown">
+            <a href="catalogo.html">Catálogo</a>
+            <ul class="dropdown-menu">
+                <li><a href="catalogo-salado.html">Salado</a></li>
+                <li><a href="catalogo-dulce.html">Dulce</a></li>
             </ul>
-        </nav>
-    </header>
-    <!-- FIN Navegación -->
+        </li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="blog.html">Newsletter</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+</nav>
+<!-- FIN Navegación -->
 
-    <!-- Main Content -->
-    <main>
-        <!-- Hero Newsletter -->
-       <section class="blog-hero">
+<!-- Hero Newsletter -->
+<section class="blog-hero">
     <h1>Únete al Newsletter!</h1>
-
     <form class="newsletter-form" action="https://formspree.io/f/xjkqbdjj" method="POST">
         <div class="newsletter-row">
             <label for="email-hero">Correo electrónico</label>
@@ -56,26 +45,23 @@
     </form>
 </section>
 
+<!-- Post Destacado -->
+<section class="featured-post">
+    <div class="post-video">
+        <iframe width="80%" height="350"
+                src="https://www.youtube.com/embed/ZyN5oSeXWf4"
+                frameborder="0"
+                allowfullscreen>
+        </iframe>
+    </div>
+    <div class="post-content">
+        <h2>Detrás de la vitrina</h2>
+        <p>Un día con Valeria en la cocina.</p>
+        <p>Conoce más sobre el proceso de nuestros deliciosos panes artesanales y descubre cosas únicas.</p>
+    </div>
+</section>
 
-
-        <!-- Post Destacado -->
-        <section class="featured-post">
-        <div class="post-video">
-    <iframe width="80%" height="350"
-            src="https://www.youtube.com/embed/ZyN5oSeXWf4"
-            frameborder="0"
-            allowfullscreen>
-    </iframe>
-</div>
-        <div class="post-content">
-            <h2>Detrás de la vitrina</h2>
-            <p>Un día con Valeria en la cocina.</p>
-            <p>Conoce más sobre el proceso de nuestros deliciosos panes artesanales y descubre cosas únicas.</p>
-        </div>
-    </section>
-</main>
-
- <!-- Footer -->
+<!-- Footer -->
 <footer>
     <div class="footer-content">
         <div class="footer-logo">
@@ -110,7 +96,11 @@
                 <a href="https://www.instagram.com/backerei.deutsche2028/" target="_blank" 
    rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
             </div>
-            <!-- Botón WhatsApp -->
+        </div>
+    </div>
+</footer>
+
+<!-- Botón WhatsApp -->
 <a href="https://wa.me/50687122163" 
    class="whatsapp-btn" 
    aria-label="WhatsApp"
@@ -118,11 +108,6 @@
    rel="noopener noreferrer">
     <i class="fa-brands fa-whatsapp"></i>
 </a>
-        </div>
-    </div>
-    
-    
-</footer>
 
 <!-- JavaScript al final del body -->
 <script src="/javaScript/blog.js"></script>
