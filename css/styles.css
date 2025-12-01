@@ -146,7 +146,8 @@ body {
     position: relative;
     height: 100vh;
     width: 100%;
-    background-image: img/portada2.0.jpg;
+    /* ✅ CORRECCIÓN: Agregado url() para que la imagen funcione */
+    background-image: url('../img/portada2.0.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -217,6 +218,8 @@ body {
     font-weight: bold;
     text-decoration: none;
     transition: 0.3s;
+    /* ✅ AGREGADO: Asegurar que el botón esté bien posicionado */
+    display: inline-block;
 }
 
 .btn-hero:hover {
