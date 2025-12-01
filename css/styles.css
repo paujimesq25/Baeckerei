@@ -102,9 +102,10 @@ body {
 
 .nav-menu a:hover,
 .nav-menu a.active {
-    background-color: var(--color-primary);
-    color: var(--color-white);
+    background-color: var(--color-primary) !important;
+    color: var(--color-white) !important;
     border-radius: 8px;
+    transform: translateY(-2px);
 }
 
 /* ===================================
@@ -137,7 +138,8 @@ body {
 }
 
 .dropdown-menu a:hover {
-    background-color: var(--color-light);
+    background-color: var(--color-primary);
+    color: var(--color-white);
 }
 
 
