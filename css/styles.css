@@ -144,9 +144,8 @@ body {
    =================================== */
 .hero {
     position: relative;
-    height: 100vh;
+    height: 75vh;
     width: 100%;
-    /* ✅ CORRECCIÓN: Agregado url() para que la imagen funcione */
     background-image: url('../img/portada2.0.jpg');
     background-size: cover;
     background-position: center;
@@ -218,7 +217,6 @@ body {
     font-weight: bold;
     text-decoration: none;
     transition: 0.3s;
-    /* ✅ AGREGADO: Asegurar que el botón esté bien posicionado */
     display: inline-block;
 }
 
@@ -344,6 +342,7 @@ body {
     font-size: 18px;
     line-height: 1.8;
     color: var(--color-dark);
+    margin-bottom: 25px;
 }
 
 .about-image {
@@ -366,7 +365,6 @@ body {
 .featured {
     padding: 80px 50px;
     background-color: var(--color-cream);
-    text-align: center;
 }
 
 .featured h2 {
@@ -374,41 +372,40 @@ body {
     color: var(--color-primary-dark);
     margin-bottom: 50px;
     font-weight: bold;
+    text-align: center;
 }
 
-.card {
-    max-width: 800px;
+.featured-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    max-width: 1200px;
     margin: 0 auto;
-    background-color: var(--color-white);
-    border-radius: 12px;
+}
+
+.featured-image {
+    width: 100%;
     overflow: hidden;
+    border-radius: 12px;
     box-shadow: var(--shadow-md);
 }
 
-.card-media {
-    width: 100%;
-    height: 400px;
-    overflow: hidden;
-}
-
-.card-media img {
+.featured-image img {
+    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.card-body {
-    padding: 40px;
-}
-
-.card-body h3 {
-    font-size: 32px;
+.featured-copy h3 {
+    font-size: 42px;
     color: var(--color-primary-dark);
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     font-weight: bold;
 }
 
-.card-body p {
+.featured-copy p {
     font-size: 18px;
     line-height: 1.8;
     color: var(--color-dark);
@@ -533,9 +530,11 @@ body {
     text-align: center;
 }
 
+/* ✅ MODIFICADO: Sin fondo blanco */
 .container {
     max-width: 800px;
     margin: 0 auto;
+    /* ❌ ELIMINADO: background-color */
 }
 
 .blog-section h2 {
@@ -545,19 +544,24 @@ body {
     font-weight: bold;
 }
 
+/* ✅ MODIFICADO: Label ahora inline con input */
 .email-label {
-    display: block;
+    display: inline-block;
     font-size: 16px;
     color: var(--color-dark);
-    margin-bottom: 15px;
+    margin-right: 15px;
     font-weight: 600;
+    white-space: nowrap;
 }
 
+/* ✅ MODIFICADO: Input group ahora con label integrado */
 .input-group {
     display: flex;
+    align-items: center;
     gap: 15px;
-    max-width: 600px;
+    max-width: 700px;
     margin: 0 auto;
+    justify-content: center;
 }
 
 .input-group input {
@@ -701,7 +705,8 @@ footer {
         padding: 60px 30px;
     }
 
-    .about-grid {
+    .about-grid,
+    .featured-grid {
         gap: 40px;
     }
 
@@ -793,7 +798,7 @@ footer {
 
     /* HERO MÓVIL */
     .hero {
-        height: 70vh;
+        height: 60vh;
         background-attachment: scroll;
     }
 
@@ -825,16 +830,19 @@ footer {
         padding: 50px 20px;
     }
 
-    .about-grid {
+    .about-grid,
+    .featured-grid {
         grid-template-columns: 1fr;
         gap: 30px;
     }
 
-    .about-copy h2 {
+    .about-copy h2,
+    .featured-copy h3 {
         font-size: 32px;
     }
 
-    .about-copy p {
+    .about-copy p,
+    .featured-copy p {
         font-size: 16px;
     }
 
@@ -845,22 +853,6 @@ footer {
 
     .featured h2 {
         font-size: 32px;
-    }
-
-    .card-media {
-        height: 250px;
-    }
-
-    .card-body {
-        padding: 30px 20px;
-    }
-
-    .card-body h3 {
-        font-size: 24px;
-    }
-
-    .card-body p {
-        font-size: 16px;
     }
 
     /* BLOG MÓVIL */
@@ -903,8 +895,16 @@ footer {
         font-size: 32px;
     }
 
+    /* ✅ MODIFICADO: Label arriba del input en móvil */
     .input-group {
         flex-direction: column;
+        align-items: stretch;
+    }
+
+    .email-label {
+        margin-right: 0;
+        margin-bottom: 10px;
+        text-align: left;
     }
 
     .input-group input,
@@ -951,6 +951,7 @@ footer {
 
     .about-copy h2,
     .featured h2,
+    .featured-copy h3,
     .blog h2,
     .blog-section h2 {
         font-size: 28px;
