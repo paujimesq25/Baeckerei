@@ -146,7 +146,7 @@ body {
     position: relative;
     height: 100vh;
     width: 100%;
-    background-image: url('/Movil/img/portada2.0.jpg');
+    background-image: url('img/portada2.0.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
