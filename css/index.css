@@ -1,13 +1,3 @@
-/* ===================================
-   INDEX.CSS - ESTILOS ESPECÍFICOS
-   =================================== */
-
-/* Este archivo puede contener estilos específicos adicionales para index.html
-   Los estilos principales están en styles.css */
-
-/* ===================================
-   MEJORAS VISUALES ADICIONALES
-   =================================== */
 
 /* Animación suave para el hero */
 .hero-content {
@@ -25,7 +15,7 @@
     }
 }
 
-/* Efecto hover mejorado para botón hero */
+
 .btn-hero {
     position: relative;
     overflow: hidden;
@@ -36,16 +26,17 @@
     content: '';
     position: absolute;
     top: 0;
-    left: -100%;
+    left: 0;
     width: 100%;
     height: 100%;
     background: var(--color-primary-dark);
-    transition: left 0.3s ease;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
     z-index: -1;
 }
 
 .btn-hero:hover::before {
-    left: 0;
+    transform: translateX(0);
 }
 
 /* Mejora visual para la tarjeta del producto favorito */
@@ -293,4 +284,3 @@
         animation-delay: 0s;
     }
 }
-
