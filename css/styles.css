@@ -102,7 +102,9 @@ body {
 
 .nav-menu a:hover,
 .nav-menu a.active {
-    color: var(--color-primary);
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border-radius: 8px;
 }
 
 /* ===================================
