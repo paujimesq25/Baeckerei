@@ -548,9 +548,8 @@ body {
     color: var(--color-primary-dark);
     margin-bottom: 40px;
     font-weight: bold;
-    /* ❌ SIN background-color */
-    /* ❌ SIN padding */
-    /* ❌ SIN border-radius */
+    background: transparent !important;
+    padding: 0 !important;
 }
 
 .email-label {
