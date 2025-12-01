@@ -1,3 +1,13 @@
+/* ===================================
+   INDEX.CSS - ESTILOS ESPECÍFICOS
+   =================================== */
+
+/* Este archivo puede contener estilos específicos adicionales para index.html
+   Los estilos principales están en styles.css */
+
+/* ===================================
+   MEJORAS VISUALES ADICIONALES
+   =================================== */
 
 /* Animación suave para el hero */
 .hero-content {
@@ -15,7 +25,7 @@
     }
 }
 
-
+/* Efecto hover mejorado para botón hero (sin cuadro visible) */
 .btn-hero {
     position: relative;
     overflow: hidden;
@@ -114,36 +124,12 @@
     animation: none;
 }
 
-/* Mejora para la timeline line */
+/* ✅ MODIFICADO: Timeline line sin puntos decorativos */
 .timeline-line {
     position: relative;
 }
 
-.timeline-line::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 12px;
-    height: 12px;
-    background: var(--color-secondary);
-    border-radius: 50%;
-    box-shadow: 0 0 0 4px var(--color-light);
-}
-
-.timeline-line::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 12px;
-    height: 12px;
-    background: var(--color-secondary);
-    border-radius: 50%;
-    box-shadow: 0 0 0 4px var(--color-light);
-}
+/* ❌ ELIMINADO: ::before y ::after que creaban los puntos naranjas */
 
 /* Efecto de fade in para secciones al hacer scroll */
 .about,
@@ -247,13 +233,6 @@
 @media (max-width: 768px) {
     .timeline-line {
         height: 60px;
-    }
-
-    .timeline-line::before,
-    .timeline-line::after {
-        width: 8px;
-        height: 8px;
-        box-shadow: 0 0 0 3px var(--color-light);
     }
 
     /* Desactivar hover effects en móvil para mejor rendimiento */
