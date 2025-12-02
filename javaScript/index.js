@@ -39,14 +39,11 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Marcar página activa
     let current = window.location.pathname.split("/").pop();
-
     if (current === "" || current === "/") {
         current = "index.html";
     }
-
     document.querySelectorAll(".nav-menu a").forEach(link => {
         const href = link.getAttribute("href");
-
         if (href === current) {
             link.classList.add("active");
         }
