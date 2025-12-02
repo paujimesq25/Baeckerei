@@ -2,40 +2,31 @@
    VARIABLES DE COLORES
    =================================== */
 :root {
-    --color-primary: #8B5E3C;
-    --color-primary-dark: #6B4628;
-    --color-secondary: #D6A24A;
-    --color-light: #F5E9DA;
-    --color-cream: #FAF6F0;
-    --color-dark: #6B4628;
-    --color-white: #FFFFFF;
+    --color-primary: #8B5E3C;      /* Marrón café principal */
+    --color-primary-dark: #6B4628; /* Marrón café oscuro */
+    --color-secondary: #D6A24A;    /* Dorado/mostaza */
+    --color-light: #F5E9DA;        /* Beige claro */
+    --color-cream: #FAF6F0;        /* Crema muy claro */
+    --color-dark: #6B4628;         /* Marrón café oscuro (textos) */
+    --color-white: #FFFFFF;        /* Blanco puro */
     --shadow-sm: 0 2px 5px rgba(107, 70, 40, 0.1);
     --shadow-md: 0 4px 12px rgba(107, 70, 40, 0.15);
     --shadow-lg: 0 8px 24px rgba(107, 70, 40, 0.1);
     --transition: all 0.3s ease;
 }
-
-/* ===================================
-   RESET Y ESTILOS BASE
-   =================================== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.logo {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;   
+    color: inherit;       
+    
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    color: var(--color-dark);
-    line-height: 1.6;
-    background-color: var(--color-cream);
-    overflow-x: hidden;
-    padding-top: 80px; /* Espacio para la navbar fija */
+   .nav-menu a.active {
+    color: var(--color-primary);
+    font-weight: 600;
+    border-bottom: 2px solid var(--color-primary);
 }
-
-/* ===================================
-   BARRA DE NAVEGACIÓN
-   =================================== */
 .navbar {
     background-color: var(--color-white);
     padding: 15px 50px;
@@ -49,12 +40,12 @@ body {
     width: 100%;
     z-index: 1000;
 }
-
 .logo {
     display: flex;
     flex-direction: column;
-    text-decoration: none;
-    color: inherit;
+    text-decoration: none;   
+    color: inherit;       
+    
 }
 
 .logo-text {
@@ -78,7 +69,7 @@ body {
     cursor: pointer;
     color: var(--color-primary);
     padding: 5px;
-    z-index: 1002;
+    z-index: 1001;
 }
 
 .nav-menu {
@@ -100,21 +91,138 @@ body {
     display: block;
 }
 
-.nav-menu a:hover {
+.nav-menu a:hover,
+.nav-menu a.active {
+    background-color: var(--color-primary) !important;
+    color: var(--color-white) !important;
+    border-radius: 8px;
+    transform: translateY(-2px);
+}
+
+/* ===================================
+   RESET Y ESTILOS BASE
+   =================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--color-dark);
+    line-height: 1.6;
+    background-color: var(--color-cream);
+    overflow-x: hidden;
+    padding-top: 80px; /* Espacio para la navbar fija */
+}
+
+/* ===================================
+   HEADER Y BARRA SOCIAL
+   =================================== */
+.social-bar {
+    background-color: var(--color-light);
+    padding: 10px 0;
+    text-align: center;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icons a {
+    font-size: 20px;
+    text-decoration: none;
+    transition: var(--transition);
     color: var(--color-primary);
 }
 
-.nav-menu a.active {
+.social-icons a:hover {
+    color: var(--color-primary-dark);
+    transform: scale(1.2);
+}
+
+.social-icons i {
+    font-size: 18px;
+}
+
+/* ===================================
+   BARRA DE NAVEGACIÓN
+   =================================== */
+.navbar {
+    background-color: var(--color-white);
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--shadow-sm);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: bold;
     color: var(--color-primary);
-    font-weight: 600;
-    border-bottom: 2px solid var(--color-primary);
+    letter-spacing: 1px;
+}
+
+.logo-subtitle {
+    font-size: 12px;
+    color: var(--color-primary-dark);
+    letter-spacing: 2px;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: var(--color-primary);
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-menu li {
+    position: relative;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--color-dark);
+    font-weight: 500;
+    padding: 10px 15px;
+    transition: var(--transition);
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    background-color: var(--color-primary) !important;
+    color: var(--color-white) !important;
+    border-radius: 8px;
+    transform: translateY(-2px);
 }
 
 /* ===================================
    DROPDOWN MENÚ
    =================================== */
 .dropdown-menu {
-    display:none ;
+    display: none ;
     position: absolute;
     top: 100%;
     left: 0;
@@ -269,18 +377,8 @@ body {
     box-shadow: var(--shadow-md);
 }
 
-.btn-secondary .chevron {
-    display: inline-block;
-    transition: transform 0.3s ease;
-    margin-left: 8px;
-}
-
-.btn-secondary.active .chevron {
-    transform: rotate(180deg);
-}
-
 /* ===================================
-   INFORMACIÓN NUTRICIONAL
+   INFORMACIÓN NUTRICIONAL DROPDOWN
    =================================== */
 .nutrition-box {
     max-height: 0;
@@ -444,13 +542,44 @@ footer {
 }
 
 /* ===================================
+   RESPONSIVE DESIGN - TABLET
+   =================================== */
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 15px 30px;
+    }
+    
+    .catalog-header {
+        padding: 50px 30px;
+    }
+
+    .catalog-header h1 {
+        font-size: 40px;
+    }
+
+    .products-grid {
+        padding: 60px 30px;
+    }
+
+    .product-item {
+        gap: 50px;
+        margin-bottom: 60px;
+    }
+    
+    .product-details h3 {
+        font-size: 32px;
+    }
+    
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+/* ===================================
    RESPONSIVE DESIGN - MÓVIL
    =================================== */
 @media (max-width: 768px) {
-    body {
-        padding-top: 80px; /* Espacio para navbar fija */
-    }
-
     .menu-toggle {
         display: block;
     }
@@ -526,7 +655,6 @@ footer {
     .catalog-nav {
         font-size: 16px;
         gap: 20px;
-        flex-wrap: wrap;
     }
 
     .products-grid {
@@ -615,6 +743,34 @@ footer {
     
     .product-origin {
         font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background: var(--color-white);
+        padding: 20px 0;
+        box-shadow: var(--shadow-md);
+        z-index: 1001;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu li {
+        text-align: center;
+        width: 100%;
     }
 }
 @media (max-width: 768px) {
