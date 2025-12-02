@@ -335,6 +335,14 @@ body {
     margin: 0 auto;
 }
 
+.about-copy {
+    order: 1;
+}
+
+.about-image {
+    order: 2;
+}
+
 .about-copy h2 {
     font-size: 42px;
     color: var(--color-primary-dark);
@@ -387,6 +395,14 @@ body {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.featured-copy {
+    order: 1;
+}
+
+.featured-image {
+    order: 2;
 }
 
 /* ✅ CORRECCIÓN 1: Imagen del brezel EXACTAMENTE igual que about-image */
@@ -840,6 +856,23 @@ footer {
     .featured-grid {
         grid-template-columns: 1fr;
         gap: 30px;
+    }
+
+    /* Mantener orden: texto primero, imagen después */
+    .about-copy {
+        order: 1;
+    }
+
+    .about-image {
+        order: 2;
+    }
+
+    .featured-copy {
+        order: 1;
+    }
+
+    .featured-image {
+        order: 2;
     }
 
     .about-copy h2,
