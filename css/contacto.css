@@ -100,12 +100,12 @@ body {
     display: block;
 }
 
-.nav-menu a:hover,
-.nav-menu a.active {
+.navbar .nav-menu li a:hover,
+.navbar .nav-menu li a.active {
     background-color: var(--color-primary) !important;
     color: var(--color-white) !important;
-    border-radius: 8px;
-    transform: translateY(-2px);
+    border-radius: 8px !important;
+    transform: translateY(-2px) !important;
 }
 
 /* ===================================
@@ -137,9 +137,9 @@ body {
     padding: 10px 20px;
 }
 
-.dropdown-menu a:hover {
-    background-color: var(--color-primary);
-    color: var(--color-white);
+.navbar .dropdown-menu li a:hover {
+    background-color: var(--color-primary) !important;
+    color: var(--color-white) !important;
 }
 
 /* ===================================
