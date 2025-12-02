@@ -216,6 +216,11 @@ body {
     color: var(--color-dark);
 }
 
+.icono-contacto {
+    margin-right: 10px;
+    color: var(--color-primary);
+}
+
 .contact-social {
     display: flex;
     gap: 15px;
@@ -296,6 +301,10 @@ footer {
     margin-bottom: 10px;
     font-size: 14px;
     color: var(--color-light);
+}
+
+.icono-footer {
+    margin-right: 10px;
 }
 
 .footer-social {
